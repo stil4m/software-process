@@ -8,26 +8,30 @@
 \usepackage{enumerate}
 \usepackage{graphicx}
 \usepackage{hyperref}
-
 \usepackage[margin=1in]{geometry}
+\usepackage{paralist}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{array,booktabs,enumitem}
 
-\title{Report on organisational models with respect to methodologies in software development}
+\title{Report on architectural decisions and assumptions \\ in the LASCAD system}
 \author{Paco van Beckhoven, Mats Stijlaart, Floris Velleman,\\ Olav Trauschke, Robin Kulhan, Ardavan Ghaffari, \\Nico de Groot, Bouke Grevelt, Spiros Tzavaras}
 
-
+  
 \bibliography{bibliography}
 
 \begin{document}
 
 \maketitle
 
-\input{./content/cmmi}
-\input{./content/waste}
-\input{./content/7s}
-\input{./content/power}
-\input{./content/integration}
-
-\printbibliography
+\input{./content/1_introduction}
+\input{./content/2_architectual_decomposition}
+\input{./content/3_system_communication}
+\input{./content/4_backup}
+\input{./content/5_gui_and_performance}
+\input{./content/6_conclusion}
+\input{./content/7_references}
+\input{./content/8_appendix_a}
 
 \end{document}
 
