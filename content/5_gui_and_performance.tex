@@ -1,3 +1,55 @@
 \section*{Graphical User Interface and Performance}
 
-TODO
+We found that decisions related to the Graphical User Interface (GUI) and its performance influenced the project.
+The end-users had to cope with errors presented on their workstations \autocite[704]{beynon1999human} and a slowly responding GUI \autocite[3126]{officialreport}.
+The fact that end-users were not able to do their work as intended eventually lead to a snowball effect that caused the disaster on the 26th and 27th of October 1992 \autocite[1017w]{officialreport}.
+
+The used literature did not mention non-functional requirements for the GUI, nor the consideration of performance issues.
+We believe the issues in the GUI were related to the lack of relevant architecture.
+There is no information that SO included alternative cases in the architecture, such as the presentation of errors in the GUI
+
+For instance, usage of architectural views to facilitate discussion and validation of the GUI with stakeholders (ambulance staff and call takers) would have made identification of GUI related problems more likely.
+There are views and methods which could have contributed here, such as user interface views.
+Examples of these kind of views are wireframe views and the Paper-prototyping method \autocite{uxpin}\autocite{snyder2003paper}.
+
+The wireframe views would have allowed SO to ``show user flows between views or pages \autocite[7]{uxpin}'' and help the stakeholders to understand the
+``content and information hierarchy as much as the the structure, functionality and behaviour'' \autocite[9]{uxpin}.
+The structure of the GUI and the flow between the different screens could have been explained or pitched to the stakeholders. This would allow SO to identify confusing screens and flows that were unclear and therefore sensitive to human mistakes.
+
+The Paper-prototyping method could have been used as an interactive way for SO to find a more optimal and suitable structure for the layout with the ambulance staff \autocite[345]{snyder2003paper}.
+These methods may have changed the process in such a way, that there would be more communication on the non-functionals between SO and the stakeholders.
+It may also have removed the lack of ownership the users experienced when using the system \autocite[1007o]{officialreport}.
+
+Systems Options chose to use a programming tool that offered increased implementation speed at the cost of execution speed \autocite[3128]{officialreport}.
+Our opinion is that this choice is rather remarkable.
+First, as the LAS was the largest ambulance service in the world at the time, the LASCAD would require high performance.
+Secondly, the system developed prior to the failed case was abandoned after performance criteria could not be met \autocite[2017]{officialreport}.
+
+Although the performance issues were addressed by LAS, these issues intentionally received little attention by SO \autocite[3128]{officialreport}.
+For example, the slow response of the software was one of the most reported issues \autocite[3126]{officialreport}.
+This can be traced back to a series of poor design choices.
+
+LAS had two options available: either use a graphical presentation or a text based presentation.
+LAS chose to use a GUI and then SO used Visual Basic to produce the screen dialogues as mentioned in the official report \autocite[3128]{officialreport}.
+Visual basic was at that time an uncommon choice for mission critical systems:
+
+\begin{itshape}
+\begin{addmargin}[1em]{1em}
+``Visual Basic is primarily used for prototyping and development of small, non-mission critical systems.
+The performance speed of visual basic applications is not fast.
+Filling screens with Visual Basic applications takes time measured in several seconds.
+In order to overcome this CAC staff preloaded all the screens they were likely to use at the start of a shift and used the Windows multitasking environment to move between them as required.
+This placed great demands on the memory available within the workstations, thus reducing performance,
+and led to a surplus of ``clutter'' on controllers' screens'' \autocite[3128]{officialreport}.
+\end{addmargin}
+\end{itshape}
+
+Satisfying a quality attribute such as response time for a mission critical system like LASCAD is crucial.
+The architecture was lacking design methods.
+This could lead to the negligence of non-functional requirements.
+We think that if SO would have applied a goal-oriented architecting (GOA) approach,
+the problem with slow response times could have been alleviated to some extent.
+In this approach candidate designs are explored, evaluated and selected based on trade-off analyses in consideration of non-functional requirements \autocite[92]{chung2011goal}.
+SO should have attributed more weight to performance using GOA when a choice was made between a graphical and textual interface,
+or proposed a different GUI language/framework that mitigated the risk of performance issues.
+But it seems ease of operator use was favored instead.
