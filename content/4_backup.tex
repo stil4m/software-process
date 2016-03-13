@@ -16,13 +16,13 @@ The problem with the fallback servers and the addition of printers could have be
 The deployment view could have shown how the different hardware components of the system should have been connected to each other.
 This could have helped to spot defects in the system when the printers were added.
 Besides a better deployment view, a better logical view on what should happen when the file servers failed and how they should have interacted could have contributed to better testing of the file servers.
-The logical view could have been represented by a sequence diagram for instance.
+A sequence diagram could have represented the logical view for instance.
 Unfortunately, we did not find a deployment view or a logical view in the literature.
 However, Figure \ref{fig:figure1} in Appendix A may have been developed before the project and is much like a deployment view, but it does not mention the file servers.
 The view in the appendix may have been used to facilitate the communication between the different companies developing the software,
 which may decrease the understanding of the purpose of the backup system in the development teams.
 
-This lack of understanding of the backups purpose, may have been the reason the system was delivered without the backup having been tested completely.
+This lack of understanding of the backups purpose may have been the reason the system was delivered without the backup having been tested completely.
 ``The testing phase shows that there was no attention for the backup system or worst-case scenarios'' \autocite[3085,3132]{officialreport}.
 ``There is no record of the backup having been tested and there can be no doubt that the effects of server failure on the printer-based system had not been tested.
 This was a serious oversight on the part of both LAS IT staff and SO and reflects, at least in part, the dangers of LAS not having their own network manager'' \autocite[4041]{officialreport}.
@@ -33,7 +33,7 @@ If flaws in the architecture had been found, they could have been solved and a b
 Besides architectural views that could have helped prevent the failure of the system, better usage of a project management methodology could have made sure a full integration test was accounted for.
 This could have helped in finding the defects in the backup that lead to its failure.
 At the start of the project the decision was made to work with PRINCE, because this was a government standard.
-But none of the members of the LAS team nor SO had prior experience with PRINCE \autocite[3068,3078]{officialreport}.
+But none of the members of neither the LAS team nor SO had prior experience with PRINCE \autocite[3068,3078]{officialreport}.
 This decision was clearly not well thought out.
 
 We can conclude there was an architectural decision to have a backup system in place,

@@ -8,7 +8,7 @@ We believe the component-based decomposition brought some advantages, such as th
 LAS decided to use hardware from the previously failed project \autocite[8]{kramer1996succeedings}.
 We assume this requirement is one of the reasons a component-based architecture was used.
 A component implementing a certain interface would be introduced to encapsulate the old hardware and corresponding software.
-This gave LAS the possibility to easily replace the legacy hardware as only the implementation of the interface would have had to change.
+This gave LAS the possibility to easily replace the legacy hardware, as only the implementation of the interface would have had to change.
 During the tender process the consortium decided to change the supplier for the AVLS system \autocite[3073]{officialreport}.
 Suppose that SO already started on the development of the CAD system, then the use of component interfaces reduced the amount of extra effort (changes flowing through the system).
 It is important to note that this advantage only applies if the interfaces are well defined.
@@ -18,7 +18,7 @@ resulting in the loss of the purpose of having interfaces at the first place.
 
 Another advantage of the component-based decomposition is the ability to replace certain components with stubs.
 A problem was the readiness of the RIFS hardware \autocite[3074]{officialreport}.
-The implementation of the integration with the RIFS was blocked as the hardware was not completely finished.
+The implementation of the integration with the RIFS was blocked, as the hardware was not completely finished.
 As different components depended on this functionality it was a crucial part of the system.
 In order to prevent this from blocking the work on other components SO started with the component interface and created a dummy implementation.
 This allowed them to continue to work on the other components instead of just waiting until the hardware was finished.
@@ -46,7 +46,7 @@ This diagram should have been part of the process to facilitate communication be
 
 When SO decomposed the architecture in different components a problem arose, which was not identified until the system ran in production.
 There was no clear specification on the input validation that had to be done for each component.
-As stated in the official report ``There had been no attempt to foresee the effect of inaccurate or incomplete data available to the system (late status reporting/vehicle locations etc.)'' \autocite[4001]{officialreport}.
+As stated in the official report, ``There had been no attempt to foresee the effect of inaccurate or incomplete data available to the system (late status reporting/vehicle locations etc.)'' \autocite[4001]{officialreport}.
 The logical view of the 4+1 model would have helped as this problem could have been identified with the use of sequence diagrams on a component level.
 Using a sequence diagram one can trace the user input from the client through the different components.
 The fact that no validation step was present should have indicated the lack of validation.
