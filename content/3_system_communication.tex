@@ -9,7 +9,7 @@ LAS decided to use hardware from the previously failed project \autocite[8]{kram
 We assume this requirement is one of the reasons a component-based architecture was used.
 A component implementing a certain interface would be introduced to encapsulate the old hardware and corresponding software.
 This gave LAS the possibility to easily replace the legacy hardware, as only the implementation of the interface would have had to change.
-During the tender process the consortium decided to change the supplier for the AVLS system \autocite[3073]{officialreport}.
+During the tender process the consortium decided to change the supplier for the Automatic Vehicle Location Systems (AVLS) \autocite[3073]{officialreport}.
 Suppose that SO already started on the development of the CAD system, then the use of component interfaces reduced the amount of extra effort (changes flowing through the system).
 It is important to note that this advantage only applies if the interfaces are well defined.
 If implementation details are reflected in the interface one still needs to change the components that use this interface when switching to a new implementation.
@@ -31,9 +31,9 @@ For example, if a change to a component interface was made one could quickly ide
 Additionally it could have been beneficial for the planning of the test process.
 For example, to identify which components could be tested separately.
 
-One of the problems of the LASCAD system was that the AVLS systems frequently did not transmit the (correct) location of ambulances.
+One of the problems of the LASCAD system was that the AVLS frequently did not transmit the (correct) location of ambulances.
 This resulted in incorrect allocations by the system such as not sending the closest vehicle to an incident \autocite[4022]{officialreport}.
-``The Datatrak system as it was installed was likely to be as reliable as any AVLS system ever could be in an urban environment such as London at that time'' \autocite[3133]{officialreport}.
+``The Datatrak system as it was installed was likely to be as reliable as any AVLS ever could be in an urban environment such as London at that time'' \autocite[3133]{officialreport}.
 The knowledge that the AVLS’s did not always submit (correct) locations was part of Datatrak’s expertise.
 SO which depended on the location data had no knowledge of this problem.
 This was a consequence of the distribution of the work between the different companies.
