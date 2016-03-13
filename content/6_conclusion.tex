@@ -1,3 +1,20 @@
 \section*{Conclusion}
 
-TODO
+We found that the dominant architectural decomposition used in the LAS case was component based.
+A major advantage of this architecture was that LAS had the option to only use some of the components when it became apparent that the full system did not function as expected.
+We believe a major drawback of this architecture can be found in a lack of communication between the teams working on different components.
+An example of this is the LASCAD software not being able to deal with imperfect ambulance location data,
+even though the fact that location data can never be perfect is common knowledge for an AVLS developer.
+
+The previously mentioned decommissioning of part of the project after it was clear that the complete system did not work as expected is the only example of changes in the architecture during or after development.
+We found that more architecture would have likely been beneficial here as the backup solution was not changed to fit the new system architecture and therefore did not function when it was needed.
+Overall we conclude that additional architecture would likely have prevented some of the major malfunctions in the project.
+
+We come to conclude that additional architecture would have improved the project result.
+Specifically the use of:
+\begin{itemize}[noitemsep]
+\item Sequence diagrams and a deployment view; this would have improved inter-team communication.
+\item A wireframe view and paper prototyping; these would have likely improved the usability of the GUI and implementation guidelines.
+\item Stating that only ‘proven’ technologies could be used would have likely improved GUI stability.
+\end{itemize}
+
