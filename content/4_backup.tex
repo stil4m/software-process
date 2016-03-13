@@ -1,3 +1,45 @@
 \section*{Backup}
 
-TODO
+``The LAS wanted adequate fallback commensurate with the need to maintain a constant high level of service'' \autocite[5038]{officialreport}.
+The idea was to implement a backup for the file system, consisting of two fallback file servers \autocite[3132]{officialreport}.
+There is no information about when the decision was made to create a backup system but we assume this was at the start of the project.
+This could have been during the requirements elicitation when there was a phase dedicated to specifying the systems requirements \autocite[2018a]{officialreport}.
+
+However, ``the fallback to the second server was never implemented by Systems Options as an integral part of this level of CAD implementation.
+It was always specified, and indeed implemented, as part of the complete paperless system and thus arguably would have activated had the system actually crashed on 26 and 27 October 1992'' \autocite[4041]{officialreport}.
+This has lead us to assume that the fallback servers and the usage of printers were not thought out in the architecture.
+``The failure of the fallback procedures arises as a consequence of what was believed at the time to be only a temporary addition of printers.
+The concept of the system was that it would operate on a totally paperless basis.
+Printers were only added, as a short term expedient, in order to implement at least a partial system at the originally planned implementation date of 8 January 1992'' \autocite[4040]{officialreport}.
+
+The problem with the fallback servers and the addition of printers could have been prevented with a deployment view on the system's architecture.
+The deployment view could have shown how the different hardware components of the system should have been connected to each other.
+This could have helped to spot defects in the system when the printers were added.
+Besides a better deployment view, a better logical view on what should happen when the file servers failed and how they should have interacted could have contributed to better testing of the file servers.
+The logical view could have been represented by a sequence diagram for instance.
+Unfortunately, we did not find a deployment view or a logical view in the literature.
+However, Figure \ref{fig:figure1} in Appendix A may have been developed before the project and is much like a deployment view, but it does not mention the file servers.
+The view in the appendix may have been used to facilitate the communication between the different companies developing the software,
+which may decrease the understanding of the purpose of the backup system in the development teams.
+
+This lack of understanding of the backups purpose, may have been the reason the system was delivered without the backup having been tested completely.
+``The testing phase shows that there was no attention for the backup system or worst-case scenarios'' \autocite[3085,3132]{officialreport}.
+``There is no record of the backup having been tested and there can be no doubt that the effects of server failure on the printer-based system had not been tested.
+This was a serious oversight on the part of both LAS IT staff and SO and reflects, at least in part, the dangers of LAS not having their own network manager'' \autocite[4041]{officialreport}.
+
+Critical analysis of the architecture, if it had been done correctly, might have helped to find out the purpose of the backup which could have not been clear for SO.
+If flaws in the architecture had been found, they could have been solved and a better backup system may have been developed.
+
+Besides architectural views that could have helped prevent the failure of the system, better usage of a project management methodology could have made sure a full integration test was accounted for.
+This could have helped in finding the defects in the backup that lead to its failure.
+At the start of the project the decision was made to work with PRINCE, because this was a government standard.
+But none of the members of the LAS team nor SO had prior experience with PRINCE \autocite[3068,3078]{officialreport}.
+This decision was clearly not well thought out.
+
+We can conclude there was an architectural decision to have a backup system in place,
+but there were no architectural views that could have prevented defects regarding printers and fallback servers in the system.
+The fallback servers were also not executed properly in the implementation phase and not tested properly during the testing phase.
+In the process, only partial integration tests were performed.
+We think testing the system as a whole would have avoided the failure of the backup.
+Finally, we think more architecture views, more critical analyses,
+and better use of PRINCE would have helped to find (and solve) defects before the development started which could have helped to avoid the failure of the backup system.
